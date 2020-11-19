@@ -4,13 +4,15 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <h1>{{ title }}</h1>
     <!-- <Home @changeTitle="updateTitleText($event)" /> -->
-    <Child :wb="webtoons" />
+    <!-- <Child :wb="webtoons" /> -->
     <!-- <Login />
     <Stock v-show="false" /> -->
-    <router-view ></router-view>    
+    <router-view :wb="webtoons"></router-view>    
     <div><button v-on:click="goBack">전페이지</button></div>
     <div>
+      <router-link to="/">Go to main</router-link> <br>
       <router-link to="/Home">Go to Home</router-link> <br>
+      <router-link to="/Child">Go to Child</router-link> <br>
       <router-link to="/Stock">Go to stock</router-link> <br>
       <router-link to="/Login">Go to Login</router-link>
     </div>
@@ -20,7 +22,7 @@
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
 //import Home from './components/Home.vue'
-import  Child  from "./components/child";
+//import  Child  from "./components/child";
 // import  Stock  from "./components/stock";
 // import  Login  from "./components/Login";
 
@@ -28,7 +30,7 @@ export default {
   name: 'App',
   components: {
     //HelloWorld,
-    Child,
+    //Child,
     // Stock,
     // Login
   },

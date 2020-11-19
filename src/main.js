@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import App from './App.vue';
 import Home from './components/Home.vue';
 import stock from './components/stock.vue';
+import child from './components/child.vue';
 import login from './components/Login.vue';
 Vue.use(VueRouter);
 
@@ -10,7 +11,7 @@ export const router = new VueRouter({
   base: '/hello-world/',
   mode: 'history',
   routes: [
-    { path: '/App', component: App },
+    { path: '/Child', component: child },
     { path: '/Home', component: Home },
     { path: '/Stock', component: stock },
     { path: '/Login', component: login }
