@@ -7,7 +7,7 @@ import login from './components/Login.vue';
 Vue.use(VueRouter);
 
 export const router = new VueRouter({
-  base: '',
+  base: '/hello-world/',
   mode: 'history',
   routes: [
     { path: '/App', component: App },

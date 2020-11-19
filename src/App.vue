@@ -4,8 +4,8 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <h1>{{ title }}</h1>
     <!-- <Home @changeTitle="updateTitleText($event)" /> -->
-    <!-- <Child />
-    <Login />
+    <Child :wb="webtoons" />
+    <!-- <Login />
     <Stock v-show="false" /> -->
     <router-view ></router-view>    
     <div><button v-on:click="goBack">전페이지</button></div>
@@ -20,7 +20,7 @@
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
 //import Home from './components/Home.vue'
-// import  Child  from "./components/child";
+import  Child  from "./components/child";
 // import  Stock  from "./components/stock";
 // import  Login  from "./components/Login";
 
@@ -28,13 +28,38 @@ export default {
   name: 'App',
   components: {
     //HelloWorld,
-    // Child,
+    Child,
     // Stock,
     // Login
   },
   data(){
     return{
-      title: 'hello'
+      title: 'hello',
+      webtoons: [
+        {
+          name: "햄스터와 그녀",
+          link: "http://webtoon.daum.net/webtoon/view/hamsterandher",
+          img:
+            "http://t1.daumcdn.net/webtoon/op/478cdf37f585607982ffa9e35b432e8503be8a54"
+        },
+        {
+          name: "프롬 스타",
+          link: "http://webtoon.daum.net/webtoon/view/fromstar",
+          img:
+            "http://t1.daumcdn.net/webtoon/op/a7fb953d722c1130bfc18440f7e3ce448ece57a1"
+        },
+        {
+          name: "위대한 로맨스",
+          link: "http://webtoon.daum.net/webtoon/view/greatromance",
+          img:
+            "http://t1.daumcdn.net/webtoon/op/a816281cb4df5c50a20ac386fd6e496643d0f085"
+        },
+        {
+          name: "빛나는 손을",
+          link: "http://webtoon.daum.net/webtoon/view/Hand",
+          img: "http://t1.daumcdn.net/cartoon/5913FCAC0234C50001"
+        }
+      ]
     }
   },
   methods : {
