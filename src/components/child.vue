@@ -37,5 +37,4 @@ export default {
 </script>
 <style scoped>
 ul li img {max-width: 100%;}
-
 </style>
