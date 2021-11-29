@@ -1,5 +1,6 @@
 <template>
     <div>
+        <img alt="Vue logo" src="../assets/logo.png">
         <h1 v-if="show">asdfasdfasfas</h1>
         <h1 v-else>111222asdfasdfasfas</h1>
         <h2>{{data}}</h2>

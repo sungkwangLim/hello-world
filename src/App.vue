@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <h1>{{ title }}</h1>
     <!-- <Home @changeTitle="updateTitleText($event)" /> -->
@@ -22,8 +22,8 @@
 //import HelloWorld from './components/HelloWorld.vue'
 //import Home from './components/Home.vue'
 //import  Child  from "./components/child";
-// import  Stock  from "./components/stock";
-// import  Login  from "./components/Login";
+//import  Stock  from "./components/stock";
+//import  Login  from "./components/Login";
 
 export default {
   name: 'App',
@@ -72,16 +72,16 @@ export default {
     }
   },
   beforeCreate : function(){
-    console.log('before create',this.title);
+    //console.log('before create',this.title);
   },
   created : function(){
-    console.log('created',this.title);
+    //console.log('created',this.title);
   },
   beforeMount : function(){
-    console.log('before mount',this.title);
+    //console.log('before mount',this.title);
   },
   mounted : function(){
-    console.log('mounted',this.title);
+    //console.log('mounted',this.title);
   }
 }
 </script>
