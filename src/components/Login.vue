@@ -1,5 +1,5 @@
 <template>
-    <form @submit="login" class="login">
+    <form @submit.prevent="login" class="login">
         <input type="text" placeholder="Enter your name" v-model="loginForm.yourname">
         <input type="password"  placeholder="Enter your password" v-model="loginForm.yourpw">
         <button>Login</button>
