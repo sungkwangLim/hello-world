@@ -2,8 +2,9 @@
   <div>
       <p> {{ msg }} </p>
       <span> {{ a + 1}}  </span>
-      <div :id="`vue${dynamicId}`" v-if="dynamicView"> {{ dynamicId }} </div>
+      <div :id="`vue${dynamicId}`" v-if="dynamicView"> {{ reverseMessage }} </div>
       <a :[attr]="attr" @[eventName]="dynamicView">asdf</a>
+      <p> {{ sum }} {{ now }}</p>
   </div>
 </template>
 
@@ -18,7 +19,6 @@ export default {
             dynamicView : true,
             attr : 'href',
             eventName: 'focus'
-
         }
     },
     created: function(){ //create 훅은 인스턴트가 생성 된 후에 호출됩니다.
@@ -27,6 +27,18 @@ export default {
     },
     mounted: function(){
         console.log(document.querySelector('#vuestudyId1')) //dom 에 있는 아이디값을 불러옴
+        console.log(`sum is : ${this.sum}`);
+    },
+    computed : {
+        reverseMessage : function(){
+            return this.msg.split('').reverse().join('')
+        },
+        sum : function() {
+            return this.a + 8
+        },
+        now: function () {
+            return new Date()
+        }
     }
 }
 </script>
