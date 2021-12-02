@@ -1,5 +1,10 @@
 <template>
-  <div></div>
+  <div>
+      <p> {{ msg }} </p>
+      <span> {{ a + 1}}  </span>
+      <div :id="`vue${dynamicId}`" v-if="dynamicView"> {{ dynamicId }} </div>
+      <a :[attr]="attr" @[eventName]="dynamicView">asdf</a>
+  </div>
 </template>
 
 <script>
@@ -7,15 +12,25 @@ export default {
     name:'study',
     data(){
         return{
-            a:1
+            msg : 'vue hi',
+            a:1,
+            dynamicId : 'studyId1',
+            dynamicView : true,
+            attr : 'href',
+            eventName: 'focus'
+
         }
     },
     created: function(){ //create 훅은 인스턴트가 생성 된 후에 호출됩니다.
         console.log(`a is : ${this.a}`);
+        console.log(document.querySelector('#vuestudyId1')) //dom 에 있는 아이디값을 못 불러옴
+    },
+    mounted: function(){
+        console.log(document.querySelector('#vuestudyId1')) //dom 에 있는 아이디값을 불러옴
     }
 }
 </script>
 
 <style>
-
+    html {background: #202124;}
 </style>

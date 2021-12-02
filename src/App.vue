@@ -7,12 +7,12 @@
     <!-- <Child :wb="webtoons" /> -->
     <!-- <Login />
     <Stock v-show="false" /> -->
-    <router-view :wb="webtoons"></router-view>    
+    <router-view ></router-view>    
     <div><button v-on:click="goBack">전페이지</button></div>
     <div>
       <router-link to="/">Go to main</router-link> <br>
       <router-link to="/Home">Go to Home</router-link> <br>
-      <router-link to="/Child">Go to Child</router-link> <br>
+      <router-link to="/Child" :wb="webtoons">Go to Child</router-link> <br>
       <router-link to="/Stock">Go to stock</router-link> <br>
       <router-link to="/Login">Go to Login</router-link>
     </div>
