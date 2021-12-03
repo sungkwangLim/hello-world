@@ -5,7 +5,7 @@
       <div :id="`vue${dynamicId}`" v-if="dynamicView"> {{ reverseMessage }} </div>
       <a :[attr]="attr" @[eventName]="goodgood">asdf</a>
       <p> {{ sum }} {{ now }}</p>
-      <input type="text" v-model="qa">
+      <input type="text" v-model="qa" :class="{'toggleClass' : qaClass}">
   </div>
 </template>
 
@@ -20,7 +20,8 @@ export default {
             dynamicView : true,
             attr : 'href',
             eventName: 'mouseover',
-            qa : ''
+            qa : '',
+            qaClass : true
         }
     },
     created: function(){ //create 훅은 인스턴트가 생성 된 후에 호출됩니다.
@@ -49,6 +50,7 @@ export default {
     },
     watch : {
         qa : function(newqa){            
+            this.qaClass = !this.qaClass
             console.log('watch qa',newqa);
         }
     }
@@ -57,4 +59,5 @@ export default {
 
 <style>
     html {background: #202124;}
+    input.toggleClass {background: #000; color: #fff;}
 </style>
