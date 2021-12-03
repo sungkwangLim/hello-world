@@ -3,8 +3,9 @@
       <p> {{ msg }} </p>
       <span> {{ a + 1}}  </span>
       <div :id="`vue${dynamicId}`" v-if="dynamicView"> {{ reverseMessage }} </div>
-      <a :[attr]="attr" @[eventName]="dynamicView">asdf</a>
+      <a :[attr]="attr" @[eventName]="goodgood">asdf</a>
       <p> {{ sum }} {{ now }}</p>
+      <input type="text" v-model="qa">
   </div>
 </template>
 
@@ -18,7 +19,8 @@ export default {
             dynamicId : 'studyId1',
             dynamicView : true,
             attr : 'href',
-            eventName: 'focus'
+            eventName: 'mouseover',
+            qa : ''
         }
     },
     created: function(){ //create 훅은 인스턴트가 생성 된 후에 호출됩니다.
@@ -38,6 +40,16 @@ export default {
         },
         now: function () {
             return new Date()
+        }
+    },
+    methods : {
+        goodgood(){ 
+            console.log('good');
+        }
+    },
+    watch : {
+        qa : function(newqa){            
+            console.log('watch qa',newqa);
         }
     }
 }
