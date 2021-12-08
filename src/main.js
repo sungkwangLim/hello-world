@@ -21,7 +21,9 @@ export const router = new VueRouter({
 });
 
 Vue.config.productionTip = false
-
+Vue.component('my-component',{
+  template: `<div>asdfasdfasdfasdf</div>`
+})
 new Vue({
   router : router,
   render: h => h(App),

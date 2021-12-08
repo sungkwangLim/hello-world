@@ -6,10 +6,12 @@
       <a :[attr]="attr" @[eventName]="goodgood">asdf</a>
       <p> {{ sum }} {{ now }}</p>
       <input type="text" v-model="qa" :class="{'toggleClass' : qaClass}">
+      <my-component></my-component>
   </div>
 </template>
 
 <script>
+
 export default {
     name:'study',
     data(){
