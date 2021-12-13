@@ -2,14 +2,14 @@
   <div id="app">
     
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <h1>{{ title }}</h1>
+    <h1 id="title">{{ title }}</h1>
     <!-- <Home @changeTitle="updateTitleText($event)" /> -->
     <!-- <Child :wb="webtoons" /> -->
     <!-- <Login />
     <Stock v-show="false" /> -->
     <router-view ></router-view>    
-    <div><button v-on:click="goBack">전페이지</button></div>
-    <div>
+    <div id="goBack"><button v-on:click="goBack">전페이지</button></div>
+    <div id="gnb">
       <router-link to="/">Go to main</router-link> <br>
       <router-link to="/Home">Go to Home</router-link> <br>
       <router-link to="/Child" :wb="webtoons">Go to Child</router-link> <br>

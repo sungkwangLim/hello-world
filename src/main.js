@@ -6,6 +6,7 @@ import stock from './components/stock.vue';
 import child from './components/child.vue';
 import login from './components/Login.vue';
 import study from './components/study.vue';
+import GsapStudy from './components/GsapStudy.vue';
 Vue.use(VueRouter);
 
 export const router = new VueRouter({
@@ -16,7 +17,8 @@ export const router = new VueRouter({
     { path: '/Home', component: Home },
     { path: '/Stock', component: stock },
     { path: '/Login', component: login },
-    { path: '/Study', component: study }
+    { path: '/Study', component: study },
+    { path: '/GsapStudy', component: GsapStudy }
   ]
 });
 
